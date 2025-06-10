@@ -1,0 +1,23 @@
+/******************************
+バリアブル
+******************************/
+@use "./mixin" as*;
+
+//color
+$color-text:  #333;
+$color-bg:    #fff;
+$color-accent:#1282c2;
+
+//z-index設定
+$z-header     : 1000;
+$z-navPanel  : 1100;
+$z-hamburger  : 1200;
+
+//header
+$header-h: 64px;
+$header-mode: fixed; // fixed or sticky
+
+//オリジナルのフォーカスリング
+$focus-color: #2684ff;
+$focus-width: 2px;
+$focus-offset: 2px;

@@ -1,0 +1,9 @@
+/******************************
+スキップローダー
+******************************/
+@use "../../foundation/forwards" as *;
+
+.p-skipLoader {
+  .js-loadingWrap { display:none !important; }
+  .c-wrapper.is-hidden { display:block !important; }
+}

@@ -1,0 +1,17 @@
+////foundation
+@use "foundation/reset";
+@use "foundation/base";
+
+
+////layout
+
+
+////object
+//component
+@use "./object/component/wrapper";
+@use "./object/component/loadingWrap";
+@use "./object/component/loading";
+
+//project
+@use "./object/project/skipLoader";
+//utility

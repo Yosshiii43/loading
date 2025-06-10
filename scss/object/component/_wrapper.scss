@@ -1,0 +1,18 @@
+/******************************
+ラッパー
+******************************/
+@use "../../foundation/forwards" as *;
+
+.c-wrapper {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  h1 {
+    font-size: 50px;
+  }
+}
+
+// JS が無効な場合のフォールバック
+@media (scripting: none) {
+  .c-wrapper     { display: block; } 
+}

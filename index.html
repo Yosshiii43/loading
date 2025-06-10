@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    if (sessionStorage.getItem('isFirstLoad')) {
+      document.documentElement.classList.add('p-skipLoader');
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/three-dots.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="c-loadingWrap js-loadingWrap">
+    <div class="c-loading">
+      <div class="dot-pulse"></div>
+    </div>
+  </div>
+  <div class="c-wrapper is-hidden">
+    <h1>メインコンテンツ</h1>
+    <a href="#">ここ</a>
+  </div><!-- /.c-wrapper -->
+  <script src="./js/main.js" defer></script>
+</body>
+</html>

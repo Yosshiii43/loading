@@ -1,0 +1,15 @@
+/******************************
+ベース
+******************************/
+@use "forwards" as *;
+
+html  {
+  font-size: 100%;
+}
+
+body  {
+  margin: 0;
+  color: $color-text;
+  background: $color-bg;
+  font-family: system-ui, "Helvetica Neue", Arial, sans-serif;
+}

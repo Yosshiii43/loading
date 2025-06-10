@@ -1,0 +1,27 @@
+/******************************
+ローディングラッパー
+******************************/
+@use "../../foundation/forwards" as *;
+
+.c-loadingWrap {
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+// フェードアウト
+.c-loadingWrap.is-fadeout {
+  animation: loadingAnime 5s forwards;
+}
+@keyframes loadingAnime {
+  to { opacity: 0; }
+}
+
+// JS が無効な場合のフォールバック
+@media (scripting: none) {
+  .c-loadingWrap { display: none; }
+}
