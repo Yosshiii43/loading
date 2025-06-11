@@ -1,10 +1,8 @@
-# roading ローディングアニメーション（three-dots）
+# roading ローディングアニメーション
 
 ## 1. 目的
-初回アクセス時のみローディングアニメーションを表示し、  
-同一タブで 2 回目以降はスキップします。  
-アニメーションの種類は [three-dots](https://github.com/nzbin/three-dots)（MIT） を使用し、  
-`dot-pulse`, `dot-elastic` など 1 行切り替えで変更できます。
+初回アクセス時のみローディングアニメーションを表示し、同一タブで 2 回目以降はスキップします。  
+アニメーションの種類は [three-dots](https://github.com/nzbin/three-dots)（MIT） を使用し、`dot-pulse`, `dot-elastic` など 1 行切り替えで変更できます。
 
 ---
 
@@ -82,7 +80,7 @@
 | その他 | 上記と同じ命名規則 |
 
 ### 切り替え手順
-1.	上表を見て <div class="dot-◯◯"></div> のクラス名を変更
+1.	上表を見て class="dot-pulse" のクラス名を変更
 2.	追加アニメを使う場合は three-dots.scss で対象モジュールを @use する
 
 ---
