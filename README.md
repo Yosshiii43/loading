@@ -32,21 +32,7 @@
 
 ---
 
-## 3. ビルド手順（例：npm scripts）
-
-```jsonc
-{
-  "scripts": {
-    "build:lib":   "sass scss/vendor/three-dots/three-dots.scss css/three-dots.css --style=compressed",
-    "build:style": "sass scss/style.scss css/style.css --load-path=scss --style=compressed",
-    "build":       "npm run build:lib && npm run build:style"
-  }
-}
-```
-
----
-
-## 4. HTMLでの読み込み
+## 3. HTMLでの読み込み
 ### heade内に
 ```html
   <script>
