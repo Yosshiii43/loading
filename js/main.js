@@ -1,3 +1,4 @@
+(() => {
 const loadingWrap = document.querySelector('.js-loadingWrap');
 const contents    = document.querySelector('.c-wrapper');
 
@@ -29,3 +30,4 @@ function loadingStop() {
     loadingWrap.style.display = 'none';      //loadingWrapを即座に消す
     showContents();                          // 本体をすぐ表示
   }
+  })();
