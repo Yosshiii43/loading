@@ -1,9 +1,6 @@
-# loading
+# roading ローディングアニメーション（three-dots）
 
-## ローディングアニメーション（three-dots）
-
-
-### 1. 目的
+## 1. 目的
 初回アクセス時のみローディングアニメーションを表示し、  
 同一タブで 2 回目以降はスキップします。  
 アニメーションの種類は [three-dots](https://github.com/nzbin/three-dots)（MIT） を使用し、  
@@ -11,7 +8,7 @@
 
 ---
 
-### 2. 構成ファイル
+## 2. 構成ファイル
 ```
 .
 ├── scss
@@ -37,7 +34,7 @@
 
 ---
 
-### 3. ビルド手順（例：npm scripts）
+## 3. ビルド手順（例：npm scripts）
 
 ```jsonc
 {
@@ -51,8 +48,8 @@
 
 ---
 
-### 4. HTMLでの読み込み
-#### heade内に
+## 4. HTMLでの読み込み
+### heade内に
 ```html
   <script>
     if (sessionStorage.getItem('isFirstLoad')) {
@@ -63,7 +60,7 @@
   <link rel="stylesheet" href="css/style.css">
 ```
 
-#### body内に
+### body内に
 
 ```html
 <div class="c-loadingWrap js-loadingWrap">
@@ -84,20 +81,20 @@
 | dot-elastic | three-dots/dot-elastic.scss |
 | その他 | 上記と同じ命名規則 |
 
-#### 切り替え手順
+### 切り替え手順
 1.	上表を見て <div class="dot-◯◯"></div> のクラス名を変更
 2.	追加アニメを使う場合は three-dots.scss で対象モジュールを @use する
 
 ---
 
-### 4. 動作フロー（JS）
+## 4. 動作フロー（JS）
 1.	ページ読み込み → main.js が sessionStorage.isFirstLoad をチェック
 2.	値が無ければローディング表示 + フェードアウト（CSS is-fadeout）完了後にフラグを true へ保存
 3.	2 回目以降は <html class="p-skipLoader"> が付与され .c-loadingWrap { display:none !important; } で完全スキップ
 
 ---
 
-### 5. カスタマイズ
+## 5. カスタマイズ
 | 項目  | 方法   |
 |------|-------|
 | フェード時間 | _loader.scss の @keyframes fade と .is-fadeout { animation: … 3s; } を同じ値にする|
@@ -107,14 +104,17 @@
 
 ---
 
-### 6. ライセンス
-•	three-dots: MIT（third_party/three-dots/LICENSE）
-•	本プロジェクト: © 2025 Yosshiii, MIT
+## 6. ライセンス
 
----
+### 6-1. 本プロジェクト
+本リポジトリに含まれる **自作コード・アセット** は  MIT License の下で提供します。  
+© 2025 Yosshiii
 
-### 7. サードパーティライブラリ
+### 6-2. サードパーティライブラリ
 
-| ライブラリ | ライセンス | 備考 |
-|------------|-----------|------|
-| three-dots (v0.3.2) | MIT | © 2018 nzbin / `third_party/three-dots/LICENSE` 参照 |
+| ライブラリ | バージョン | ライセンス | 出典 |
+|------------|-----------|-----------|------|
+| three-dots | v0.3.2 | MIT | © 2018 nzbin / `scss/vendor/three-dots/LICENSE` |
+
+> three-dots の CSS ファイル先頭に著作権表記と MIT 許諾文が、  
+> さらに全文コピーを上記パスに同梱しています。
