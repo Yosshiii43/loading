@@ -12,30 +12,28 @@
 ---
 
 ### 2. 構成ファイル
+```
 .
-├─ scss/
-│  ├─ vendor/
-│  │   └─ three-dots/          
-│  │       ├─ three-dots.scss  # three-dots 入口（バナー + @use 群）
-│  │       ├─ _dot-bricks.scss # three-dots の表示パターンのバリエーション
-│  │       └─ LICENSE          
-│  │
-│  └─ object/
-│      └─ component/
-│          ├─ _loader.scss       # ローディングアニメ配置
-│          ├─ _loaderWrap.scss   # ローディング画面全体
-│          └─ _wrapper.scss  　　 # コンテンツ全体をラップ
-│      └─ project/
-│          └─ _skip-loader.scss   # 2 回目以降スキップ用
-│
-├─ css/                           # ビルド後の CSS 出力先
-│  ├─ three-dots.css              # three-dots 専用
-│  └─ style.css                   # その他のスタイル
-│
-├─ js/
-│  └─ main.js                     # sessionStorage 制御
-│
-└─ index.html
+├── scss
+│   ├── vendor
+│   │   └── three-dots
+│   │       ├── three-dots.scss      # 入口（バナー + @use 群）
+│   │       ├── _dot-bricks.scss     # three-dots のバリエーション
+│   │       └── LICENSE              # MIT ライセンス全文
+│   └── object
+│       ├── component
+│       │   ├── _loader.scss         # アニメ要素（.c-loading）
+│       │   ├── _loaderWrap.scss     # 全画面オーバーレイ
+│       │   └── _wrapper.scss        # コンテンツラッパー
+│       └── project
+│           └── _skip-loader.scss    # 2 回目以降スキップ用
+├── css                              # ビルド後 CSS
+│   ├── three-dots.css               # three-dots 専用
+│   └── style.css                    # 自作スタイル
+├── js
+│   └── main.js                      # sessionStorage 制御
+└── index.html
+```
 
 ---
 
